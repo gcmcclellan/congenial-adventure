@@ -106,8 +106,9 @@ def dragon():
         print 'um'
 
 #if bucket == "1" or bucket == "2":
-#rock_paper_scissors(player, computer)
+    #rock_paper_scissors(player, computer)
 def rock_paper_scissors():
+    print "You must play the dragon in rock, paper, scissors in order to get a good swipe at its head. A tied round does not count as a play, however whichever player wins best out of 3 plays will ultimately become the winner."
     t = ["rock", "paper", "scissors"]
     computer = t[randint(0,2)]
     player = raw_input("Do you choose rock, paper, or scissors?")
@@ -116,16 +117,16 @@ def rock_paper_scissors():
     while plays <= 2 or wins <= 1:
         print "Dragon guess: " + computer
         print "Your guess:" + str(player)
-        #print "Number of plays:" + str(plays)
-        #print "Princess " + str(name) + "'s wins:" + str(wins)
+            #print "Number of plays:" + str(plays)
+            #print "Princess " + str(name) + "'s wins:" + str(wins)
         if player.lower() != "rock" and player.lower() != "paper" and player.lower() != "scissors":
             print "Uh-oh! Looks like something went awry. Check to make sure you typed rock, paper, or scissors."
             player = raw_input("Try again! ")
         elif player.lower() == computer:
             computer = t[randint(0,2)]
-            print "You tied the dragon!"
+            print "You tied the dragon!"  
             player = raw_input("Play again! Rock, paper, or scissors?")
-        
+    
         else:
             if player.lower() == "rock" and computer == "paper":
                 computer = t[randint(0,2)]
@@ -153,6 +154,8 @@ def rock_paper_scissors():
                     print "Yay! You won."
                     print "Number of plays: " + str(plays)
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
+                    if wins <= 0 and plays <= 1:
+                         player = raw_input("Play again! Rock, paper, or scissors?")
                 elif player.lower() == "paper" and computer == "rock":
                     computer = t[randint(0,2)]
                     plays += 1
@@ -160,6 +163,8 @@ def rock_paper_scissors():
                     print "Yay! You won."
                     print "Number of plays: " + str(plays)
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
+                    if wins <= 0 and plays <= 1:
+                         player = raw_input("Play again! Rock, paper, or scissors?")
                 elif player.lower() == "rock" and computer == "scissors":
                     computer = t[randint(0,2)]
                     plays += 1
@@ -167,10 +172,13 @@ def rock_paper_scissors():
                     print "Yay! You won."
                     print "Number of plays: " + str(plays)
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
-            if plays == 2:
+                    if wins <= 0 and plays <= 1:
+                         player = raw_input("Play again! Rock, paper, or scissors?")
+            if plays == 2 and wins < 1:
+                print "Uh-oh...Looks like the dragon has won best out of 3!"
                 break
             elif wins == 2:
-                print "Yay! You beat the dragon!"
+                print "Yay! You beat the dragon, best out of 3!" 
                 break
 #if bucket == "3":
 #bucket_depend()
