@@ -133,6 +133,7 @@ def rock_paper_scissors():
                 plays += 1
                 print "Uh-oh! The dragon won!."
                 print "Number of plays: " + str(plays)
+                print "Number of Princess " + str(name) + "'s wins: " + str(wins)
                 player = raw_input("Play again! Rock, paper, or scissors?")
             elif player.lower() == "paper" and computer == "scissors":
                 computer = t[randint(0,2)]
@@ -140,12 +141,14 @@ def rock_paper_scissors():
                 print "Uh-oh! The dragon won!."
                 player = raw_input("Play again! Rock, paper, or scissors?")
                 print "Number of plays: " + str(plays)
+                print "Number of Princess " + str(name) + "'s wins: " + str(wins)
             elif player.lower() == "scissors" and computer == "rock":
                 computer = t[randint(0,2)]
                 plays += 1
                 print "Uh-oh! The dragon won!"
                 player = raw_input("Play again! Rock, paper, or scissors?")
                 print "Number of plays: " + str(plays)
+                print "Number of Princess " + str(name) + "'s wins: " + str(wins)
             else: # iterate plays and wins each time
                 if player.lower() == "scissors" and computer == "paper":
                     computer = t[randint(0,2)]
@@ -154,6 +157,7 @@ def rock_paper_scissors():
                     print "Yay! You won."
                     print "Number of plays: " + str(plays)
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
+                    print "Number of Princess " + str(name) + "'s wins: " + str(wins)
                     if wins <= 0 and plays <= 1:
                          player = raw_input("Play again! Rock, paper, or scissors?")
                 elif player.lower() == "paper" and computer == "rock":
