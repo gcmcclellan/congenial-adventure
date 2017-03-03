@@ -250,6 +250,10 @@ if bucket == "1" or bucket == "2":
     print "Now that you have picked your weapon, you must fight the dragon! Beat the dragon in rock paper scissors in order to STAB IT IN THE FACE!"
 if bucket == "1" or bucket == "2":
     rock_paper_scissors()
+if wins == 2 and bucket == "1":
+    "Now that you have defeated the dragon in rock, paper, scissors, you swing your clunky shield and hit the dragon square in its face. It roars and falls to the ground, and you run past its limp body into the castle.  Inside the foyer, Prince Eric awaits, and he smiles and cries out in joy upon seeing your face.  You whisk the prince away, ready to bring him home. The end."
+if wins == 2 and bucket == "2":
+     "Now that you have defeated the dragon in rock, paper, scissors, you swing your sword and stab the dragon in its face. It roars and falls to the ground, and you run past its limp body into the castle.  Inside the foyer, Prince Eric awaits, and he smiles and cries out in joy upon seeing your face.  You whisk the prince away, ready to bring him home. The end."
 if bucket == "3":
     bucket_depend()
 if bucket == "3":
