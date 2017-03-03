@@ -1,5 +1,5 @@
 from random import randint
-
+# this is a comment
 def supplies():
     supplies = raw_input("Do you bring the magic potion or poison?")
     
