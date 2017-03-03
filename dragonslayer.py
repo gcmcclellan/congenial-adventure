@@ -42,7 +42,7 @@ def alligator_fight(direction, supplies):
 #if direction == "right" and supplies == "potion":
 #unicorn()
 def unicorn():
-    print "As you stumble through the forest, you arrive at a clearing.  HAZAR! A dozen bright, shiny unicorns lay in the grass, munching flowers. Following the Fairies' advice, you begin to attempt to get on the unicorn.  You have 3 chances to get on the unicorn in the correct fashion... but be careful! The unicorn might stab you with its horn if you try to get on it in the wrong way."
+    print "As you stumble through the forest, you arrive at a clearing.  HAZAR! A dozen bright, shiny unicorns lay in the grass, munching flowers. Following the Fairies' advice, you begin to attempt to get on the unicorn.  You have 3 chances to get on the unicorn in the correct fashion... but be careful! The unicorn might stab you with its horn if you try to get on it the wrong way."
     guess = raw_input("Choose a number between 1 and 10. Your number will determine whether you can successfully ride the unicorn out of the forest. Your number:")
 #unicorn()
 def unicorn_ride(guess):
@@ -86,7 +86,7 @@ def cave_cont(escape_cave, direction_cave):
     if escape_cave == "right":
         print ' '
     elif direction_cave == "left":
-        print "Oh no! You wander around in the cave aimlessly, slowly panicing as you seem to get more and more lost. Princess " + str(name) + " dies of claustrophobia. Yikes!"
+        print "Oh no! You wander around in the cave aimlessly, slowly panicking as you seem to get more and more lost. Princess " + str(name) + " dies of claustrophobia. Yikes!"
     elif direction_cave == "right":
         print "HAZAR! You wander through the cave for a while, and soon you see a light. You follow the light out of the cave, and find yourself in a beatiful field full of flowers.  After wandering through the field, you spot a magnificent castle...THE CASTLE OF PRINCE ERIC!!"
     elif direction_cave != "right" or direction_cave != "left":
