@@ -74,6 +74,9 @@ def stuck_in_cave(direction):
     elif direction == "right" and supplies == "potion":
         print "As the unicorn flaps its wings, you admire the rolling hills and forested areas that unfold underneath you.  Clouds and mist swish past you, creating a hazy smog. Soon, the unicorn begins to descend, and you find yourself landing in amongst tall, imposing oak trees.  You hop off the unicorn and give it a pat on its neck as it leaves. Once again, Princess " + str(name) + " is alone - but have no fear! You walk throught the forest, weaving through trees and over knotted roots... Oh no! You have twisted your ankle on a root, and you have fallen into a deep hole! Princess " + str(name) + " struggles to stand up and climb out, but she soon realized that she is stuck in a cave."
 # Call function
+def escape_cave():
+    escape_cave = raw_input("Will you choose to go right or left in the dark cave?")
+    return escape_cave
 def cave(escape_cave, action):
     if escape_cave == "right":
         if action == "sword":
@@ -249,7 +252,7 @@ if direction == "right" and supplies == "potion":
 if direction == "right" and supplies == "potion":
     unicorn_ride(guess)
 stuck_in_cave(direction)
-escape_cave = raw_input("Will you choose to go right or left in the dark cave?")
+escape_cave = escape_cave()
 if escape_cave == "right":
     print "You turn right and agitate a swarm of bats! As they swoop around in a frenzy, you must choose to either swing your sword at them or stealthily creep out."
     action = raw_input("Do you choose sword or sneak?")
