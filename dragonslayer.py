@@ -9,7 +9,7 @@ def supplies():
     elif supplies != "poison" or supplies != "potion":
         print "Sorry! You have to type potion or poison in lowercase."
 
-def direction_fork():
+def direction_fork(direction, supplies):
     if direction == "right" and supplies == "potion":
         print "You have arrived at the Fairy Forest - what a magical, mysterious place! The fairies will give you advice in excange for the magic potion.  They tell you to continue through their dark and mysterious forest until you arrive at the Unicorn Clearing."
     elif direction == "right" and supplies == "poison":
@@ -231,11 +231,11 @@ def unicorn_ride2(guess):
 name = raw_input("What is your princess name?")
 print "You are princess " + str(name) + ", and you are given the task to save Prince Eric from the EVIL DRAGON. Along the way you will encounter DANGEROUS challenges. GOOD LUCK!"
 print "As you prepare for your journey, you have to decide what to bring.  In your closet, there is a sword, which you grab right away.  You have one pocket, and you can choose to fill it with potion or poison."
-supplies()
+supplies = supplies()
 print "Great! Now you are ready to begin.  Once you walk outside, you are met with a fork in the road."
 direction = raw_input("Do you go right or left at the fork in the road?")
 print "Princess " + str(name) + " will go " + str(direction) + "."
-direction_fork()
+direction_fork(direction, supplies)
 if direction == "left" and supplies == "poison":
     print "As you leave the Ogre's dead body, you make your way through the swamp, stepping through mushy mud and oozing piles of gunk. The smell was awful, but Princess " + str(name) + " kept moving. Soon, you arrive at a deep part of the swamp... An alligator jumps out! It smiles at you, flashing its gnarly teeth. 'If you want to pass my swamp, you must guess my number correctly.  Otherwise...Let's just say I haven't eaten in a while!'"
 if direction == "left" and supplies == "posion":
