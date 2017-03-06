@@ -41,9 +41,10 @@ def alligator_fight(direction, supplies):
 #unicorn_ride(guess)
 #if direction == "right" and supplies == "potion":
 #unicorn()
-def unicorn():
-    print "As you stumble through the forest, you arrive at a clearing.  HAZAR! A dozen bright, shiny unicorns lay in the grass, munching flowers. Following the Fairies' advice, you begin to attempt to get on the unicorn.  You have 3 chances to get on the unicorn in the correct fashion... but be careful! The unicorn might stab you with its horn if you try to get on it the wrong way."
+def guess():
+    print "As you stumble through the forest, you arrive at a clearing.  HAZAR! A dozen bright, shiny unicorns lay in the grass, munching flowers. Following the Fairies' advice, you begin to attempt to get on the unicorn.  You have 3 chances to get on the unicorn in the correct fashion... but be careful! The unicorn might stab you with its horn if you try to get on it in the wrong way."   
     guess = raw_input("Choose a number between 1 and 10. Your number will determine whether you can successfully ride the unicorn out of the forest. Your number:")
+    return guess
 #unicorn()
 def unicorn_ride(guess):
     for i in range(3):
@@ -240,7 +241,7 @@ if direction == "right" and supplies == "potion":
 if direction == "left" and supplies == "posion":
     alligator_fight(direction, supplies)
 if direction == "right" and supplies == "potion":
-    unicorn()
+    guess()
 if direction == "right" and supplies == "potion":
     unicorn_ride(guess)
 stuck_in_cave()
