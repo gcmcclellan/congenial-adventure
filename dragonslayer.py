@@ -8,6 +8,9 @@ def supplies():
         return str(supplies)
     elif supplies != "poison" or supplies != "potion":
         print "Sorry! You have to type potion or poison in lowercase."
+def direction():
+    direction = raw_input("Do you go right or left at the fork in the road?")
+    return direction
 
 def direction_fork(direction, supplies):
     if direction == "right" and supplies == "potion":
@@ -233,7 +236,8 @@ print "You are princess " + str(name) + ", and you are given the task to save Pr
 print "As you prepare for your journey, you have to decide what to bring.  In your closet, there is a sword, which you grab right away.  You have one pocket, and you can choose to fill it with potion or poison."
 supplies = supplies()
 print "Great! Now you are ready to begin.  Once you walk outside, you are met with a fork in the road."
-direction = raw_input("Do you go right or left at the fork in the road?")
+direction = direction()
+direction()
 print "Princess " + str(name) + " will go " + str(direction) + "."
 direction_fork(direction, supplies)
 if direction == "left" and supplies == "poison":
