@@ -94,38 +94,49 @@ def cave_cont(escape_cave, direction_cave):
 
 #if direction_cave == "right" or action == "sneak":
 #dragon()
-def dragon():
+def bucket():
     bucket = raw_input("Which bucket will you choose?")
+    return bucket
+def dragon(bucket):
     if bucket == '1':
         print "WOOT-WOOT! You have chosen the magic, dragon-fighting sword! GO FIGHT THAT DRAGON!"
     elif bucket == '2':
-        print "Nice! You picked the magic shield.  Although you will have a tough battle without a dragon-proof sword, your special shield should hold up. GOOD LUCK FIGHTING THAT DRAGON!"
+        print "Nice! You picked the magic shield.  Although you will have a tough battle without a dragon-proof sword, your special shield should hold up. GOOD LUCK FIGHTING THAT DRAGON!"  
     elif bucket == '3':
         print "Uh-oh...looks like you picked a stick... I don't know how you are going to beat the dragon with a stick!"
     else:
-        print 'um'
+        print 'Uh-oh! Make sure you type 1, 2, or 3!'
 
+#if bucket == "1" or bucket == "2":
+    #rock_paper_scissors(player, computer)
 #if bucket == "1" or bucket == "2":
     #rock_paper_scissors(player, computer)
 def rock_paper_scissors():
     print "You must play the dragon in rock, paper, scissors in order to get a good swipe at its head. A tied round does not count as a play, however whichever player wins best out of 3 plays will ultimately become the winner."
     t = ["rock", "paper", "scissors"]
     computer = t[randint(0,2)]
-    player = raw_input("Do you choose rock, paper, or scissors?")
+    #player = raw_input("Do you choose rock, paper, or scissors?")
     plays = 0
     wins = 0
-    while plays <= 2 or wins <= 1:
-        print "Dragon guess: " + computer
+    while plays <= 3 or wins <= 2:
+        if plays == 3 and wins < 2:
+            print "Uh-oh...Looks like the dragon has won best out of 3!"
+            break
+        elif wins == 2:
+            print "Yay! You beat the dragon, best out of 3!" 
+            break
+        #print "Dragon guess: " + computer
+        player = raw_input("Pick rock paper scissors")
         print "Your guess:" + str(player)
             #print "Number of plays:" + str(plays)
             #print "Princess " + str(name) + "'s wins:" + str(wins)
         if player.lower() != "rock" and player.lower() != "paper" and player.lower() != "scissors":
             print "Uh-oh! Looks like something went awry. Check to make sure you typed rock, paper, or scissors."
-            player = raw_input("Try again! ")
+            #player = raw_input("Try again! ")
         elif player.lower() == computer:
             computer = t[randint(0,2)]
             print "You tied the dragon!"  
-            player = raw_input("Play again! Rock, paper, or scissors?")
+            #player = raw_input("Play again! Rock, paper, or scissors?")
     
         else:
             if player.lower() == "rock" and computer == "paper":
@@ -134,19 +145,19 @@ def rock_paper_scissors():
                 print "Uh-oh! The dragon won!."
                 print "Number of plays: " + str(plays)
                 print "Number of Princess " + str(name) + "'s wins: " + str(wins)
-                player = raw_input("Play again! Rock, paper, or scissors?")
+                #player = raw_input("Play again! Rock, paper, or scissors?")
             elif player.lower() == "paper" and computer == "scissors":
                 computer = t[randint(0,2)]
                 plays += 1
                 print "Uh-oh! The dragon won!."
-                player = raw_input("Play again! Rock, paper, or scissors?")
+                #player = raw_input("Play again! Rock, paper, or scissors?")
                 print "Number of plays: " + str(plays)
                 print "Number of Princess " + str(name) + "'s wins: " + str(wins)
             elif player.lower() == "scissors" and computer == "rock":
                 computer = t[randint(0,2)]
                 plays += 1
                 print "Uh-oh! The dragon won!"
-                player = raw_input("Play again! Rock, paper, or scissors?")
+                #player = raw_input("Play again! Rock, paper, or scissors?")
                 print "Number of plays: " + str(plays)
                 print "Number of Princess " + str(name) + "'s wins: " + str(wins)
             else: # iterate plays and wins each time
@@ -158,8 +169,8 @@ def rock_paper_scissors():
                     print "Number of plays: " + str(plays)
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
                     print "Number of Princess " + str(name) + "'s wins: " + str(wins)
-                    if wins <= 0 and plays <= 1:
-                         player = raw_input("Play again! Rock, paper, or scissors?")
+                    #if wins <= 0 and plays <= 1:
+                    #player = raw_input("Play again! Rock, paper, or scissors?")
                 elif player.lower() == "paper" and computer == "rock":
                     computer = t[randint(0,2)]
                     plays += 1
@@ -167,8 +178,8 @@ def rock_paper_scissors():
                     print "Yay! You won."
                     print "Number of plays: " + str(plays)
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
-                    if wins <= 0 and plays <= 1:
-                         player = raw_input("Play again! Rock, paper, or scissors?")
+                    #if wins <= 0 and plays <= 1:
+                    #player = raw_input("Play again! Rock, paper, or scissors?")
                 elif player.lower() == "rock" and computer == "scissors":
                     computer = t[randint(0,2)]
                     plays += 1
@@ -176,16 +187,14 @@ def rock_paper_scissors():
                     print "Yay! You won."
                     print "Number of plays: " + str(plays)
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
-                    if wins <= 0 and plays <= 1:
-                         player = raw_input("Play again! Rock, paper, or scissors?")
-            if plays == 2 and wins < 1:
-                print "Uh-oh...Looks like the dragon has won best out of 3!"
-                break
-            elif wins == 2:
-                print "Yay! You beat the dragon, best out of 3!" 
-                break
-#if bucket == "3":
-#bucket_depend()
+                    #if wins <= 0 and plays <= 1:
+                    #player = raw_input("Play again! Rock, paper, or scissors?")
+        
+def bucket_depend():
+    if bucket == "3":
+        print "Well, since you chose the bucket with a stick...RUN!!!"
+    else:
+        print ' '
 def bucket_depend():
     if bucket == "3":
         print "Well, since you chose the bucket with a stick...RUN!!!"
@@ -245,7 +254,8 @@ if escape_cave == "left":
 cave_cont(escape_cave, direction_cave)
 if direction_cave == "right" or action == "sneak":
     print "Once you arrive at the castle, you come face to face with a massive, red dragon. Its              scales reflect sunlight and shine in yours as it flies down to meet you. It has massive, black claws that pierce the earth as it sits in front of you, barring your path. It roars, and you duck you head avoid its hot, putrid breath. 'Princess " + str(name) + ", I see you have arrived. In order to retrieve Prince Eric, you must pass me. Because I am so big and strong, I could kill you in an instant.  In order to make this little game more interesting, I will let you choose between 3 buckets. One bucket has a sword strong enough to pierce my scales, one bucket has a shield that can block my fire, and the other has a measly stick from the forest. You must choose one bucket, and you will not know what is inside the bucket you choose.  The buckets are numbered 1, 2 and 3.' With that, the dragon gave a sly smile, flashing rows and rows of pearly daggers. It presented 3 wooden buckets, and set them in front of Princess " + str(name) + " and crossed its arms, flapping its      wings while it waited."
-dragon()
+bucket = bucket()
+dragon(bucket)
 if bucket == "1" or bucket == "2":
     print "Now that you have picked your weapon, you must fight the dragon! Beat the dragon in rock paper scissors in order to STAB IT IN THE FACE!"
 if bucket == "1" or bucket == "2":
