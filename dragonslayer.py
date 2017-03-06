@@ -68,13 +68,13 @@ def unicorn_ride(guess):
                 print "You are out of guesses.  You wander around the forest, eventually getting lost. You die of starvation. Or exposure. Or both."
     return guess
 #unicorn_ride(guess)
-def stuck_in_cave():
+def stuck_in_cave(direction):
     if direction == "left" and supplies == "poison":
         print "As you leave the swamp, the mushy land gives way to a grassy forest.  The ground is uneven; you stumble up and down. Oh no! You have twisted your ankle and fallen into a hole!  You struggle to stand, but realize you are only falling deeper into the ditch. Princess " + str(name) + " is stuck in a cave."
     elif direction == "right" and supplies == "potion":
         print "As the unicorn flaps its wings, you admire the rolling hills and forested areas that unfold underneath you.  Clouds and mist swish past you, creating a hazy smog. Soon, the unicorn begins to descend, and you find yourself landing in amongst tall, imposing oak trees.  You hop off the unicorn and give it a pat on its neck as it leaves. Once again, Princess " + str(name) + " is alone - but have no fear! You walk throught the forest, weaving through trees and over knotted roots... Oh no! You have twisted your ankle on a root, and you have fallen into a deep hole! Princess " + str(name) + " struggles to stand up and climb out, but she soon realized that she is stuck in a cave."
 # Call function
-def cave():
+def cave(escape_cave, action):
     if escape_cave == "right":
         if action == "sword":
             print "Uh oh! You swing the sword, but the bats are quicker and they sink their teeth into you, leaving you laying in a bloody mess. Princess " + str(name) + " dies."
@@ -248,7 +248,7 @@ if direction == "right" and supplies == "potion":
     guess()
 if direction == "right" and supplies == "potion":
     unicorn_ride(guess)
-stuck_in_cave()
+stuck_in_cave(direction)
 escape_cave = raw_input("Will you choose to go right or left in the dark cave?")
 if escape_cave == "right":
     print "You turn right and agitate a swarm of bats! As they swoop around in a frenzy, you must choose to either swing your sword at them or stealthily creep out."
@@ -267,7 +267,7 @@ if bucket == "1" or bucket == "2":
     rock_paper_scissors()
 if wins == 2 and bucket == "1":
     "Now that you have defeated the dragon in rock, paper, scissors, you swing your clunky shield and hit the dragon square in its face. It roars and falls to the ground, and you run past its limp body into the castle.  Inside the foyer, Prince Eric awaits, and he smiles and cries out in joy upon seeing your face.  You whisk the prince away, ready to bring him home. The end."
-elif wins == 2 and bucket == "2":
+if wins == 2 and bucket == "2":
      "Now that you have defeated the dragon in rock, paper, scissors, you swing your sword and stab the dragon in its face. It roars and falls to the ground, and you run past its limp body into the castle.  Inside the foyer, Prince Eric awaits, and he smiles and cries out in joy upon seeing your face.  You whisk the prince away, ready to bring him home. The end."
 if bucket == "3":
     bucket_depend()
