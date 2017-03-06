@@ -67,9 +67,9 @@ def unicorn_ride(guess):
 #unicorn_ride(guess)
 def stuck_in_cave():
     if direction == "left" and supplies == "poison":
-        return "As you leave the swamp, the mushy land gives way to a grassy forest.  The ground is uneven; you stumble up and down. Oh no! You have twisted your ankle and fallen into a hole!  You struggle to stand, but realize you are only falling deeper into the ditch. Princess " + str(name) + " is stuck in a cave."
+        print "As you leave the swamp, the mushy land gives way to a grassy forest.  The ground is uneven; you stumble up and down. Oh no! You have twisted your ankle and fallen into a hole!  You struggle to stand, but realize you are only falling deeper into the ditch. Princess " + str(name) + " is stuck in a cave."
     elif direction == "right" and supplies == "potion":
-        return "As the unicorn flaps its wings, you admire the rolling hills and forested areas that unfold underneath you.  Clouds and mist swish past you, creating a hazy smog. Soon, the unicorn begins to descend, and you find yourself landing in amongst tall, imposing oak trees.  You hop off the unicorn and give it a pat on its neck as it leaves. Once again, Princess " + str(name) + " is alone - but have no fear! You walk throught the forest, weaving through trees and over knotted roots... Oh no! You have twisted your ankle on a root, and you have fallen into a deep hole! Princess " + str(name) + " struggles to stand up and climb out, but she soon realized that she is stuck in a cave."
+        print "As the unicorn flaps its wings, you admire the rolling hills and forested areas that unfold underneath you.  Clouds and mist swish past you, creating a hazy smog. Soon, the unicorn begins to descend, and you find yourself landing in amongst tall, imposing oak trees.  You hop off the unicorn and give it a pat on its neck as it leaves. Once again, Princess " + str(name) + " is alone - but have no fear! You walk throught the forest, weaving through trees and over knotted roots... Oh no! You have twisted your ankle on a root, and you have fallen into a deep hole! Princess " + str(name) + " struggles to stand up and climb out, but she soon realized that she is stuck in a cave."
 # Call function
 def cave():
     if escape_cave == "right":
