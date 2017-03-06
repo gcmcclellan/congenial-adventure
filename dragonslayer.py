@@ -236,7 +236,7 @@ print "Great! Now you are ready to begin.  Once you walk outside, you are met wi
 direction = raw_input("Do you go right or left at the fork in the road?")
 print "Princess " + str(name) + " will go " + str(direction) + "."
 direction_fork()
-if direction == "right" and supplies == "potion":
+if direction == "left" and supplies == "poison":
     print "As you leave the Ogre's dead body, you make your way through the swamp, stepping through mushy mud and oozing piles of gunk. The smell was awful, but Princess " + str(name) + " kept moving. Soon, you arrive at a deep part of the swamp... An alligator jumps out! It smiles at you, flashing its gnarly teeth. 'If you want to pass my swamp, you must guess my number correctly.  Otherwise...Let's just say I haven't eaten in a while!'"
 if direction == "left" and supplies == "posion":
     alligator_fight(direction, supplies)
