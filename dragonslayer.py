@@ -1,15 +1,21 @@
 from random import randint
-
+# We need to fix skipping to the cave tomorrow
 def supplies():
-    supplies = raw_input("Do you bring the magic potion or poison?")
+    supplies = raw_input("Do you bring the magic potion or poison? ")
     
     if supplies == "potion" or supplies == "poison":
         print "Princess " + name + " will bring the " + supplies
         return str(supplies)
     elif supplies != "poison" or supplies != "potion":
         print "Sorry! You have to type potion or poison in lowercase."
+<<<<<<< HEAD
+        supplies2 = raw_input("Type 'potion' or 'poison:'")
+def direction():
+    direction = raw_input("Do you go right or left at the fork in the road? ")
+=======
 def direction():
     direction = raw_input("Do you go right or left at the fork in the road?")
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
     return direction
 
 def direction_fork(direction, supplies):
@@ -20,15 +26,13 @@ def direction_fork(direction, supplies):
     elif direction == "left" and supplies == "potion":
         print "You have entered the Ogre Swamp.  Oh no! You have chosen the wrong supply! You can't defend yourself against the Ogre without poison. The Ogre will kill princess " + str(name) + " now. "
     elif direction == "left" and supplies == "poison":
-        print "You have entered the Ogre Swamp. You poured the poison on the Ogre and have defeted him. He falls to the ground, writhing in pain as the posion stings and burns his slimey, green skin. Congratulations, Princess " + str(name) + "!"
-#if direction == "left" and supplies == "posion":
-#alligator_fight(direction, supplies)
+        print "You have entered the Ogre Swamp. You poured the poison on the Ogre and have defeated him. He falls to the ground, writhing in pain as the posion stings and burns his slimey, green skin. Congratulations, Princess " + str(name) + "!"
 def alligator_fight(direction, supplies):
     if direction == "left" and supplies == "poison":
         print "You have the supplies you need!"
         print "Now, an alligator attacks!"
         
-        alligator_num = randint(0,11)
+        alligator_num = randint(1,10)
         guess_num = int(raw_input("Pick a number between 1 and 10 to see if you defeat the alligator!  "))
         while guess_num != alligator_num:
             guess_num = int(raw_input("Uh, oh!  He looks angry!  Guess again, quickly!!  "))
@@ -72,12 +76,21 @@ def stuck_in_cave(direction):
     if direction == "left" and supplies == "poison":
         print "As you leave the swamp, the mushy land gives way to a grassy forest.  The ground is uneven; you stumble up and down. Oh no! You have twisted your ankle and fallen into a hole!  You struggle to stand, but realize you are only falling deeper into the ditch. Princess " + str(name) + " is stuck in a cave."
     elif direction == "right" and supplies == "potion":
+<<<<<<< HEAD
+        print "As the unicorn flaps its wings, you admire the rolling hills and forested areas that unfold underneath you.  Clouds and mist swish past you, creating a hazy smog. Soon, the unicorn begins to descend, and you find yourself landing amongst tall, imposing oak trees.  You hop off the unicorn and give it a pat on its neck as it leaves. Once again, Princess " + str(name) + " is alone - but have no fear! You walk throught the forest, weaving through trees and over knotted roots... Oh no! You have twisted your ankle on a root, and you have fallen into a deep hole! Princess " + str(name) + " struggles to stand up and climb out, but she soon realized that she is stuck in a cave."
+# Call function
+def escape_cave():
+    escape_cave = raw_input("Will you choose to go right or left in the dark cave? ")
+    return escape_cave
+def cave(escape_cave):
+=======
         print "As the unicorn flaps its wings, you admire the rolling hills and forested areas that unfold underneath you.  Clouds and mist swish past you, creating a hazy smog. Soon, the unicorn begins to descend, and you find yourself landing in amongst tall, imposing oak trees.  You hop off the unicorn and give it a pat on its neck as it leaves. Once again, Princess " + str(name) + " is alone - but have no fear! You walk throught the forest, weaving through trees and over knotted roots... Oh no! You have twisted your ankle on a root, and you have fallen into a deep hole! Princess " + str(name) + " struggles to stand up and climb out, but she soon realized that she is stuck in a cave."
 # Call function
 def escape_cave():
     escape_cave = raw_input("Will you choose to go right or left in the dark cave?")
     return escape_cave
 def cave(escape_cave, action):
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
     if escape_cave == "right":
         if action == "sword":
             print "Uh oh! You swing the sword, but the bats are quicker and they sink their teeth into you, leaving you laying in a bloody mess. Princess " + str(name) + " dies."
@@ -102,7 +115,11 @@ def cave_cont(escape_cave, direction_cave):
 #if direction_cave == "right" or action == "sneak":
 #dragon()
 def bucket():
+<<<<<<< HEAD
+    bucket = raw_input("Which bucket will you choose? ")
+=======
     bucket = raw_input("Which bucket will you choose?")
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
     return bucket
 def dragon(bucket):
     if bucket == '1':
@@ -118,22 +135,39 @@ def dragon(bucket):
     #rock_paper_scissors(player, computer)
 #if bucket == "1" or bucket == "2":
     #rock_paper_scissors(player, computer)
+<<<<<<< HEAD
+plays = 0
+wins = 0
+=======
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
 def rock_paper_scissors():
     print "You must play the dragon in rock, paper, scissors in order to get a good swipe at its head. A tied round does not count as a play, however whichever player wins best out of 3 plays will ultimately become the winner."
     t = ["rock", "paper", "scissors"]
     computer = t[randint(0,2)]
     #player = raw_input("Do you choose rock, paper, or scissors?")
+<<<<<<< HEAD
+    #plays = 0
+    #wins = 0
+=======
     plays = 0
     wins = 0
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
     while plays <= 3 or wins <= 2:
         if plays == 3 and wins < 2:
             print "Uh-oh...Looks like the dragon has won best out of 3!"
             break
         elif wins == 2:
+<<<<<<< HEAD
+            print "Yay! You beat the dragon, best out of 3!"
+            break
+        #print "Dragon guess: " + computer
+        player = raw_input("Pick rock, paper, or scissors: ")
+=======
             print "Yay! You beat the dragon, best out of 3!" 
             break
         #print "Dragon guess: " + computer
         player = raw_input("Pick rock paper scissors")
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
         print "Your guess:" + str(player)
             #print "Number of plays:" + str(plays)
             #print "Princess " + str(name) + "'s wins:" + str(wins)
@@ -196,25 +230,26 @@ def rock_paper_scissors():
                     print "Princess " + str(name) + " has " + str(wins) + " win(s)."
                     #if wins <= 0 and plays <= 1:
                     #player = raw_input("Play again! Rock, paper, or scissors?")
+<<<<<<< HEAD
+    return win
+
+=======
         
 def bucket_depend():
     if bucket == "3":
         print "Well, since you chose the bucket with a stick...RUN!!!"
     else:
         print ' '
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
 def bucket_depend():
     if bucket == "3":
         print "Well, since you chose the bucket with a stick...RUN!!!"
     else:
         print ' '
-
-
-
-
-def run_away(bucket, unicorn):
+def run_away(bucket, guess):
     if bucket == "3":
-        print "As you run, you make your way towards the Fairy Forest to the left. The dragon roars, and leaps into the air to begin following you.  It breathes fire, missing your hair by inches - lucky! As you stumble into the forest, you find yourself back in the unicorn clearing."
-    guess = raw_input("Choose a number between 1 and 10. Your number will determine whether you can successfully ride the unicorn out of the forest. Your number:")
+        print "As you run, you make your way towards the Fairy Forest to the left. The dragon roars, and leaps into the air to begin following you.  It breathes fire, missing your hair by inches - lucky! As you stumble into the forest, you find yourself in a unicorn clearing."
+    guess = raw_input("Choose a number between 1 and 10. Your number will determine whether you can successfully ride the unicorn out of the forest and escape the evil dragon, which is hot on your feet. Your number:")
 def unicorn_ride2(guess):
     for i in range(3):
         if guess == 5 or guess == 9:
@@ -234,12 +269,24 @@ def unicorn_ride2(guess):
                 print "You are out of guesses. The dragon zooms down from the clouds, and gobbles you up. Ouchie."
     return guess
 #calling all the functions
-name = raw_input("What is your princess name?")
+name = raw_input("What is your princess name? ")
 print "You are princess " + str(name) + ", and you are given the task to save Prince Eric from the EVIL DRAGON. Along the way you will encounter DANGEROUS challenges. GOOD LUCK!"
 print "As you prepare for your journey, you have to decide what to bring.  In your closet, there is a sword, which you grab right away.  You have one pocket, and you can choose to fill it with potion or poison."
 supplies = supplies()
 print "Great! Now you are ready to begin.  Once you walk outside, you are met with a fork in the road."
 direction = direction()
+<<<<<<< HEAD
+#direction(direction)
+print "Princess " + str(name) + " will go " + str(direction) + "."
+direction_fork(direction,supplies)
+if direction == "left" and supplies == "poison":
+    direction_fork(direction, supplies)
+    print "As you leave the Ogre's dead body, you make your way through the swamp, stepping through mushy mud and oozing piles of gunk. The smell was awful, but Princess " + str(name) + " kept moving. Soon, you arrive at a deep part of the swamp... An alligator jumps out! It smiles at you, flashing its gnarly teeth. 'If you want to pass my swamp, you must guess my number correctly.  Otherwise...Let's just say I haven't eaten in a while!'"
+    alligator_fight(direction, supplies)
+    print "As you leave the Ogre's dead body, you make your way through the swamp, stepping through mushy mud and oozing piles of gunk. The smell was awful, but Princess " + str(name) + " kept moving. Soon, you arrive at a deep part of the swamp... An alligator jumps out! It smiles at you, flashing its gnarly teeth. 'If you want to pass my swamp, you must guess my number correctly.  Otherwise...Let's just say I haven't eaten in a while!'"
+#guess = guess()
+if direction == "right" and supplies == "potion":
+=======
 direction()
 print "Princess " + str(name) + " will go " + str(direction) + "."
 direction_fork(direction, supplies)
@@ -250,19 +297,28 @@ if direction == "left" and supplies == "poison":
 if direction == "right" and supplies == "potion":
     guess()
     elif direction == "right" and supplies == "potion":
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
     unicorn_ride(guess)
 stuck_in_cave(direction)
 escape_cave = escape_cave()
 if escape_cave == "right":
     print "You turn right and agitate a swarm of bats! As they swoop around in a frenzy, you must choose to either swing your sword at them or stealthily creep out."
     action = raw_input("Do you choose sword or sneak?")
-cave()
+cave(escape_cave)
 if escape_cave == "left":
+<<<<<<< HEAD
+    direction_cave = raw_input("After you wander for a while, you find yourself at wall. It is dark and you can hardly see anything...Right or left?")
+    cave_cont(escape_cave, direction_cave)
+if escape_cave == "right" and action == "sneak" or escape_cave == "left" and direction_cave == "right":
+    print "Once you arrive at the castle, you come face to face with a massive, red dragon. Its scales reflect sunlight and shine in your eyes as it flies down to meet you. It has massive, black claws that pierce the earth as it sits in front of you, barring your path. It roars, and you duck your head to avoid its hot, putrid breath. 'Princess " + str(name) + ", I see you have arrived. In order to retrieve Prince Eric, you must pass me. Because I am so big and strong, I could kill you in an instant.  In order to make this little game more interesting, I will let you choose between 3 buckets. One bucket has a sword strong enough to pierce my scales, one bucket has a shield that can block my fire, and the other has a measly stick from the forest. You must choose one bucket, and you will not know what is inside the bucket you choose.  The buckets are numbered 1, 2 and 3.' With that, the dragon gave a sly smile, flashing rows and rows of pearly daggers. It presented 3 wooden buckets, and set them in front of Princess " + str(name) + " and crossed its arms, flapping its wings while it waited."
+#dragon()
+=======
     direction_cave =raw_input("After you wander for a while, you find yourself at wall. It is dark and you can hardly see anything...Right or left?")
 cave_cont(escape_cave, direction_cave)
 if direction_cave == "right" or action == "sneak":
     print "Once you arrive at the castle, you come face to face with a massive, red dragon. Its scales reflect sunlight and shine in yours as it flies down to meet you. It has massive, black claws that pierce the earth as it sits in front of you, barring your path. It roars, and you duck you head avoid its hot, putrid breath. 'Princess " + str(name) + ", I see you have arrived. In order to retrieve Prince Eric, you must pass me. Because I am so big and strong, I could kill you in an instant.  In order to make this little game more interesting, I will let you choose between 3 buckets. One bucket has a sword strong enough to pierce my scales, one bucket has a shield that can block my fire, and the other has a measly stick from the forest. You must choose one bucket, and you will not know what is inside the bucket you choose.  The buckets are numbered 1, 2 and 3.' With that, the dragon gave a sly smile, flashing rows and rows of pearly daggers. It presented 3 wooden buckets, and set them in front of Princess " + str(name) + " and crossed its arms, flapping its wings while it waited."
 dragon()
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
 bucket = bucket()
 dragon(bucket)
 if bucket == "1" or bucket == "2":
@@ -273,10 +329,15 @@ if wins == 2 and bucket == "1":
     "Now that you have defeated the dragon in rock, paper, scissors, you swing your clunky shield and hit the dragon square in its face. It roars and falls to the ground, and you run past its limp body into the castle.  Inside the foyer, Prince Eric awaits, and he smiles and cries out in joy upon seeing your face.  You whisk the prince away, ready to bring him home. The end."
 if wins == 2 and bucket == "2":
      "Now that you have defeated the dragon in rock, paper, scissors, you swing your sword and stab the dragon in its face. It roars and falls to the ground, and you run past its limp body into the castle.  Inside the foyer, Prince Eric awaits, and he smiles and cries out in joy upon seeing your face.  You whisk the prince away, ready to bring him home. The end."
+<<<<<<< HEAD
+if wins < 2 and plays == 3:
+    print "Since the dragon has beat you at rock, paper, scissors, he opens his mouth and eats you. Ouchie."
+=======
+>>>>>>> 75a0ef2062ba9604c42120d2b9a3828e9281e953
 if bucket == "3":
     bucket_depend()
-if bucket == "3":
-    run_away(bucket, unicorn)
+#if bucket == "3":
+    run_away(bucket, guess)
     unicorn_ride2(guess)
 
 
